@@ -5,12 +5,13 @@ body {
     color: #333;
 }
 
-/* HEADER (GREEN BANNER) */
+/* HEADER (GREEN BANNER WITH ROUND END) */
 header {
     background: #1b5e20;
     color: white;
     text-align: center;
     padding: 40px 20px;
+    border-radius: 0 0 20px 20px;
 }
 
 header h1 {
@@ -45,13 +46,13 @@ ul {
 }
 
 ul li {
-    background: #e8f5e9;
+    background: #4756d6;
     margin: 8px 0;
     padding: 10px;
     border-radius: 6px;
 }
 
-/* LINKS (SOCIAL MEDIA) */
+/* LINKS (SOCIAL MEDIA ICONS) */
 section a {
     color: #1b5e20;
     text-decoration: none;
@@ -82,4 +83,4 @@ footer {
     background: #1b5e20;
     color: white;
     margin-top: 20px;
-}
+/* } */
