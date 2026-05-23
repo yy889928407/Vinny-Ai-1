@@ -76,6 +76,171 @@ section a:hover {
     font-weight: bold;
 }
 
+/* ANIMATIONS & KEYFRAMES */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(27, 94, 32, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(46, 125, 50, 0.8);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* HOVER ANIMATIONS */
+section {
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+}
+
+section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(27, 94, 32, 0.2);
+}
+
+ul li {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+ul li:hover {
+    background: #2e7d32;
+    color: white;
+    transform: scale(1.05) translateX(5px);
+    box-shadow: 0 5px 15px rgba(46, 125, 50, 0.4);
+}
+
+section a {
+    transition: all 0.3s ease;
+}
+
+section a:hover {
+    transform: scale(1.15);
+    color: #1b5e20;
+}
+
+/* ICON CIRCLES */
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+    color: white;
+    font-size: 28px;
+    margin: 10px;
+    box-shadow: 0 4px 15px rgba(27, 94, 32, 0.3);
+    animation: glow 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.icon-circle:hover {
+    transform: scale(1.2) rotateZ(360deg);
+    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+}
+
+/* 3D FLOATING CARDS */
+.floating-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    max-width: 350px;
+    animation: float 3s ease-in-out infinite;
+    perspective: 1000px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.floating-card:hover {
+    transform: rotateX(5deg) rotateY(5deg) translateY(-20px);
+    box-shadow: 0 20px 40px rgba(46, 125, 50, 0.2);
+}
+
+/* GLASSMORPHISM */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-button {
+    background: rgba(46, 125, 50, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(46, 125, 50, 0.3);
+    color: #1b5e20;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.glass-button:hover {
+    background: rgba(46, 125, 50, 0.4);
+    border-color: rgba(46, 125, 50, 0.6);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
+}
+
+/* GLOWING ECO EFFECTS */
+.eco-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.eco-border {
+    border: 2px solid #2e7d32;
+    box-shadow: 0 0 15px rgba(46, 125, 50, 0.4), inset 0 0 15px rgba(46, 125, 50, 0.1);
+}
+
+.eco-text-glow {
+    color: #1b5e20;
+    text-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+    font-weight: bold;
+}
+
+/* ENHANCED HEADER WITH GLOW */
+header {
+    animation: glow 4s ease-in-out infinite;
+}
+
+/* ENHANCED SECTIONS WITH 3D */
+section {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
