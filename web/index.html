@@ -9,78 +9,123 @@
 </head>
 
 <body>
-    <div class="backend-status">Backend status: Running</div>
-
     <!-- HEADER -->
     <header>
         <h1>GreenHarvest Spaces Africa 🌱</h1>
         <p>Empowering youth. Restoring ecosystems. Securing food systems.</p>
     </header>
 
-    <!-- ABOUT -->
-    <section>
-        <h2>About Us</h2>
-        <p>
-            GreenHarvest Spaces Africa is a youth-led initiative focused on climate action,
-            environmental conservation, and sustainable food systems.
-        </p>
-    </section>
+    <!-- FEATURED ABOUT US SECTION -->
+    <div class="featured-about">
+        <div class="about-box">
+            <h2>About Us</h2>
+            <p>
+                GreenHarvest Spaces Africa is a youth-led initiative focused on climate action,
+                environmental conservation, and sustainable food systems.
+            </p>
+        </div>
+    </div>
 
-    <!-- FOCUS AREAS -->
-    <section>
-        <h2>Our Focus Areas</h2>
+    <!-- FEATURED ECO G-HUBS SECTION -->
+    <div class="featured-about">
+        <div class="about-box eco-hub-box">
+            <h2>Eco G-Hubs 🌱</h2>
+            <p>
+                Community-driven hubs advancing climate action, agroforestry,
+                water solutions, and youth empowerment.
+            </p>
+        </div>
+    </div>
 
-        <ul>
-            <li>🌍 Climate Action (SDG 13)</li>
-            <li>🌽 Food Security (SDG 2)</li>
-            <li>📚 Environmental Education (SDG 4)</li>
-            <li>🌳 Tree Planting & Ecosystem Restoration</li>
-        </ul>
-    </section>
+    <!-- COLLAPSIBLE SECTIONS -->
+    <div class="sections-container">
+        <!-- FOCUS AREAS -->
+        <section class="collapsible-section" id="focus-section">
+            <div class="section-header" onclick="toggleSection('focus-section')">
+                <h2>Our Focus Areas <span class="toggle-icon">▼</span></h2>
+            </div>
+            <div class="section-content">
+                <ul>
+                    <li>🌍 Climate Action (SDG 13)</li>
+                    <li>🌽 Food Security (SDG 2)</li>
+                    <li>📚 Environmental Education (SDG 4)</li>
+                    <li>🌳 Tree Planting & Ecosystem Restoration</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- ECO G-HUBS -->
-    <section>
-        <h2>Eco G-Hubs 🌱</h2>
-        <p>
-            Community-driven hubs advancing climate action, agroforestry,
-            water solutions, and youth empowerment.
-        </p>
-    </section>
+        <!-- OUR WORK -->
+        <section class="collapsible-section" id="work-section">
+            <div class="section-header" onclick="toggleSection('work-section')">
+                <h2>Our Work <span class="toggle-icon">▼</span></h2>
+            </div>
+            <div class="section-content">
+                <p>
+                    We engage youth and communities through training, tree planting,
+                    and sustainable agriculture practices.
+                </p>
+            </div>
+        </section>
 
-    <!-- OUR WORK -->
-    <section>
-        <h2>Our Work</h2>
-        <p>
-            We engage youth and communities through training, tree planting,
-            and sustainable agriculture practices.
-        </p>
-    </section>
+        <!-- IMPACT -->
+        <section class="collapsible-section" id="impact-section">
+            <div class="section-header" onclick="toggleSection('impact-section')">
+                <h2>Our Impact <span class="toggle-icon">▼</span></h2>
+            </div>
+            <div class="section-content">
+                <p>
+                    Over 5 hectares restored, 200+ youth empowered, and growing
+                    climate resilience across communities.
+                </p>
+            </div>
+        </section>
 
-    <!-- IMPACT -->
-    <section>
-        <h2>Our Impact</h2>
-        <p>
-            Over 5 hectares restored, 200+ youth empowered, and growing
-            climate resilience across communities.
-        </p>
-    </section>
-
-    <!-- SOCIAL MEDIA -->
-    <section>
-        <h2>Follow Us</h2>
-
-        <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a> |
-        <a href="https://twitter.com/greenhas" target="_blank">Twitter</a> |
-        <a href="https://www.instagram.com/greenh.spaces" target="_blank">Instagram</a> |
-        <a href="https://www.linkedin.com/company/greenharvestspaces" target="_blank">LinkedIn</a>
-
-    </section>
+        <!-- SOCIAL MEDIA -->
+        <section class="collapsible-section" id="social-section">
+            <div class="section-header" onclick="toggleSection('social-section')">
+                <h2>Follow Us <span class="toggle-icon">▼</span></h2>
+            </div>
+            <div class="section-content">
+                <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a> |
+                <a href="https://twitter.com/greenhas" target="_blank">Twitter</a> |
+                <a href="https://www.instagram.com/greenh.spaces" target="_blank">Instagram</a> |
+                <a href="https://www.linkedin.com/company/greenharvestspaces" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+    </div>
 
     <!-- FOOTER -->
     <footer>
         <p>© 2026 GreenHarvest Spaces Africa 💚</p>
     </footer>
 
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const content = section.querySelector('.section-content');
+            const icon = section.querySelector('.toggle-icon');
+            
+            section.classList.toggle('active');
+            
+            if (section.classList.contains('active')) {
+                content.style.display = 'block';
+                icon.textContent = '▲';
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▼';
+            }
+        }
+
+        // Expand first section by default
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstSection = document.querySelector('.collapsible-section');
+            if (firstSection) {
+                firstSection.classList.add('active');
+                firstSection.querySelector('.section-content').style.display = 'block';
+                firstSection.querySelector('.toggle-icon').textContent = '▲';
+            }
+        });
+    </script>
 </body>
 
 </html>
