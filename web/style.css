@@ -102,6 +102,7 @@ body {
     max-width: 900px;
     margin: 20px auto;
     padding: 10px;
+    flex-grow: 1;
 }
 
 /* HEADER (GREEN BANNER) */
