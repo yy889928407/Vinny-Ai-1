@@ -1,3 +1,23 @@
+/* YELLOW 3D BANNER AT TOP */
+.yellow-banner {
+    background: linear-gradient(135deg, #ffeb3b, #fdd835, #ffeb3b);
+    padding: 30px 20px;
+    text-align: center;
+    animation: yellowing3d 4s ease-in-out infinite;
+    box-shadow: 0 10px 40px rgba(255, 193, 7, 0.4);
+    border-bottom: 5px solid #f57f17;
+    position: relative;
+    z-index: 1000;
+}
+
+.yellow-banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #f57f17;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -270,5 +290,4 @@ footer {
 
 footer p {
     margin: 0;
-}
 }
