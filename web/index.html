@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenHarvest Spaces Africa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <!-- YELLOW 3D BANNER -->
     <div class="yellow-banner">
-        <h1>🌟 YELLOW BANNER 3D TOP 🌟</h1>
+        <h1><i class="fas fa-star"></i> YELLOW BANNER 3D TOP <i class="fas fa-star"></i></h1>
     </div>
 
     <!-- HEADER -->
     <header>
-        <h1>GreenHarvest Spaces Africa 🌱</h1>
+        <h1>GreenHarvest Spaces Africa <i class="fas fa-leaf"></i></h1>
         <p>Empowering youth. Restoring ecosystems. Securing food systems.</p>
     </header>
 
@@ -34,7 +35,7 @@
     <!-- FEATURED ECO G-HUBS SECTION -->
     <div class="featured-about">
         <div class="about-box eco-hub-box">
-            <h2>Eco G-Hubs 🌱</h2>
+            <h2>Eco G-Hubs <i class="fas fa-leaf"></i></h2>
             <p>
                 Community-driven hubs advancing climate action, agroforestry,
                 water solutions, and youth empowerment.
@@ -51,10 +52,10 @@
             </div>
             <div class="section-content">
                 <ul>
-                    <li>🌍 Climate Action (SDG 13)</li>
-                    <li>🌽 Food Security (SDG 2)</li>
-                    <li>📚 Environmental Education (SDG 4)</li>
-                    <li>🌳 Tree Planting & Ecosystem Restoration</li>
+                    <li><i class="fas fa-earth-americas"></i> Climate Action (SDG 13)</li>
+                    <li><i class="fas fa-leaf"></i> Food Security (SDG 2)</li>
+                    <li><i class="fas fa-book"></i> Environmental Education (SDG 4)</li>
+                    <li><i class="fas fa-tree"></i> Tree Planting & Ecosystem Restoration</li>
                 </ul>
             </div>
         </section>
@@ -101,8 +102,21 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 GreenHarvest Spaces Africa 💚</p>
+        <p>© 2026 GreenHarvest Spaces Africa <i class="fas fa-heart"></i></p>
     </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+            const icon = section.querySelector('.toggle-icon');
+            if (section.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
 
     <script>
         function toggleSection(sectionId) {

@@ -18,6 +18,48 @@
     letter-spacing: 2px;
 }
 
+.yellow-banner h1 i {
+    margin: 0 10px;
+    font-size: 2.5rem;
+    animation: bounce 1s infinite;
+}
+
+/* ICON STYLING */
+i {
+    color: inherit;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+header h1 i {
+    color: white;
+    margin: 0 8px;
+}
+
+.about-box h2 i {
+    color: #f57f17;
+}
+
+ul li i {
+    color: #1b5e20;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+footer i {
+    color: #ff4081;
+    margin: 0 5px;
+}
+
 body {
     margin: 0;
     padding: 0;
