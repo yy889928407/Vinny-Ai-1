@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenHarvest Spaces Africa</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link id="page-style" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        const styleLink = document.getElementById('page-style');
+        if (styleLink && styleLink.getAttribute('href').includes('{{')) {
+            styleLink.href = '../static/style.css';
+        }
+    </script>
 </head>
 
 <body>
@@ -14,10 +20,12 @@
         <nav class="top-nav">
             <a href="#about">About</a>
             <a href="#focus">Focus</a>
+            <a href="#story">Story Yako</a>
             <a href="#hubs">Eco Hubs</a>
             <a href="#work">Work</a>
             <a href="#impact">Impact</a>
             <a href="#follow">Follow</a>
+            <a href="#contact">Get in Touch</a>
         </nav>
     </div>
 
@@ -25,13 +33,37 @@
 
     <!-- HEADER -->
     <header>
+        <div class="hero-graphics" aria-hidden="true">
+            <span class="shape shape-1"></span>
+            <span class="shape shape-2"></span>
+            <span class="shape shape-3"></span>
+        </div>
         <div class="hero-content">
             <h1>GreenHarvest Spaces Africa 🌱</h1>
             <p>Empowering youth. Restoring ecosystems. Securing food systems.</p>
             <div class="hero-badges">
-                <span>HD Visual Design</span>
-                <span>Live Host Rendering</span>
-                <span>Focus on Climate Action</span>
+                <span>Story Yako Africa</span>
+                <span>Nature-led Impact</span>
+            </div>
+
+            <div class="hero-panels">
+                <div class="hero-image-card">
+                    <img src="https://images.unsplash.com/photo-1470169048094-53a15c1f2b6e?auto=format&fit=crop&w=1500&q=80" alt="Community planting trees in a green landscape">
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-bar">
+                        <div class="stat-bar__label"><span>Youth Engagement</span><strong>88%</strong></div>
+                        <div class="progress-track"><div class="progress-fill progress-fill--green" style="width: 88%"></div></div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-bar__label"><span>Ecosystem Restoration</span><strong>73%</strong></div>
+                        <div class="progress-track"><div class="progress-fill progress-fill--teal" style="width: 73%"></div></div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-bar__label"><span>Food Security Reach</span><strong>94%</strong></div>
+                        <div class="progress-track"><div class="progress-fill progress-fill--gold" style="width: 94%"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -84,6 +116,26 @@
         </p>
     </section>
 
+    <!-- STORY -->
+    <section id="story" class="story-section">
+        <div class="story-heading">
+            <h2>Share Your Story — Story Yako Africa</h2>
+            <p>Post your story here to highlight youth action, community resilience, and the green future we’re building together.</p>
+        </div>
+        <div class="story-grid">
+            <article class="story-card">
+                <span class="story-badge story-badge--yellow">New</span>
+                <h3>From Seed to Harvest</h3>
+                <p>Young farmers share how sustainable gardens are strengthening local food security.</p>
+            </article>
+            <article class="story-card">
+                <span class="story-badge story-badge--blue">Spotlight</span>
+                <h3>Eco Hubs in Action</h3>
+                <p>Community volunteers document water restoration, youth training, and climate resilience.</p>
+            </article>
+        </div>
+    </section>
+
     <!-- SOCIAL MEDIA -->
     <section id="follow">
         <h2>Follow Us</h2>
@@ -95,6 +147,17 @@
             <a href="https://www.linkedin.com/company/greenharvestspaces" target="_blank">LinkedIn</a>
         </div>
 
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>We’d love to connect with youth, partners, and supporters. Reach out to explore collaboration, volunteering, or project support.</p>
+        <div class="contact-links">
+            <a href="mailto:info@greenharvestspaces.africa">Email Us</a>
+            <a href="tel:+1234567890">Call Us</a>
+            <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        </div>
     </section>
 
     <!-- FOOTER -->

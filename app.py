@@ -7,7 +7,7 @@ def home():
     return render_template(
         "index.html",
         backend_status="Running",
-        backend_host=request.host,
+        backend_host=request.url_root.rstrip('/'),
     )
 
 @app.route("/status")
