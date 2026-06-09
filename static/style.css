@@ -1,38 +1,120 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #e8f5e9;
-    color: #333;
+    font-family: Inter, Arial, sans-serif;
+    background: radial-gradient(circle at top center, rgba(255,255,255,0.95), #e8f5e9 35%, #c8e6c9 100%);
+    color: #1b3a28;
+    min-height: 100vh;
 }
 
-/* HEADER (GREEN BANNER WITH ROUND END) */
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid rgba(27, 94, 32, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    backdrop-filter: blur(12px);
+}
+
+.host-info {
+    font-size: 0.95rem;
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+.top-nav {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.top-nav a {
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(46, 125, 50, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.top-nav a:hover {
+    background: rgba(46, 125, 50, 0.18);
+    transform: translateY(-1px);
+}
+
+/* HEADER (HD HERO CARD) */
 header {
-    background: #1b5e20;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #60a15b 100%);
     color: white;
     text-align: center;
-    padding: 40px 20px;
-    border-radius: 0 0 20px 20px;
+    padding: 60px 24px;
+    border-radius: 0 0 34px 34px;
+    box-shadow: 0 25px 60px rgba(27, 94, 32, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 35%),
+                radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 22%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.2rem;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    letter-spacing: 0.02em;
 }
 
 header p {
-    margin-top: 10px;
-    font-size: 1.1rem;
+    margin: 18px auto 0;
+    font-size: 1.15rem;
+    max-width: 760px;
+    line-height: 1.7;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.hero-badges span {
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* SECTIONS */
 section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.95);
+    margin: 24px auto;
+    padding: 26px;
+    width: min(95%, 980px);
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(27, 94, 32, 0.08);
 }
 
 /* HEADINGS */
@@ -42,26 +124,54 @@ h2 {
 
 /* LIST STYLE */
 ul {
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
 }
 
 ul li {
-    background: #4756d6;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 6px;
+    background: linear-gradient(135deg, #2e7d32, #60a15b);
+    color: white;
+    margin: 0;
+    padding: 16px 18px;
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(46, 125, 50, 0.16);
 }
 
 /* LINKS (SOCIAL MEDIA ICONS) */
 section a {
     color: #1b5e20;
     text-decoration: none;
-    font-weight: bold;
-    margin: 0 5px;
+    font-weight: 700;
+    margin: 0 8px;
 }
 
 section a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #2e7d32;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.social-links a {
+    background: #e8f5e9;
+    border: 1px solid rgba(46, 125, 50, 0.2);
+    padding: 12px 18px;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-links a:hover {
+    background: #dcedc8;
+    transform: translateY(-2px);
 }
 
 .backend-status {

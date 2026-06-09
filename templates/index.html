@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-       <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenHarvest Spaces Africa</title>
@@ -10,16 +9,35 @@
 </head>
 
 <body>
+    <div class="top-bar">
+        <div class="host-info">Hosting: {{ backend_host }}</div>
+        <nav class="top-nav">
+            <a href="#about">About</a>
+            <a href="#focus">Focus</a>
+            <a href="#hubs">Eco Hubs</a>
+            <a href="#work">Work</a>
+            <a href="#impact">Impact</a>
+            <a href="#follow">Follow</a>
+        </nav>
+    </div>
+
     <div class="backend-status">Backend status: {{ backend_status }}</div>
 
     <!-- HEADER -->
     <header>
-        <h1>GreenHarvest Spaces Africa 🌱</h1>
-        <p>Empowering youth. Restoring ecosystems. Securing food systems.</p>
+        <div class="hero-content">
+            <h1>GreenHarvest Spaces Africa 🌱</h1>
+            <p>Empowering youth. Restoring ecosystems. Securing food systems.</p>
+            <div class="hero-badges">
+                <span>HD Visual Design</span>
+                <span>Live Host Rendering</span>
+                <span>Focus on Climate Action</span>
+            </div>
+        </div>
     </header>
 
     <!-- ABOUT -->
-    <section>
+    <section id="about">
         <h2>About Us</h2>
         <p>
             GreenHarvest Spaces Africa is a youth-led initiative focused on climate action,
@@ -28,7 +46,7 @@
     </section>
 
     <!-- FOCUS AREAS -->
-    <section>
+    <section id="focus">
         <h2>Our Focus Areas</h2>
 
         <ul>
@@ -40,7 +58,7 @@
     </section>
 
     <!-- ECO G-HUBS -->
-    <section>
+    <section id="hubs">
         <h2>Eco G-Hubs 🌱</h2>
         <p>
             Community-driven hubs advancing climate action, agroforestry,
@@ -49,7 +67,7 @@
     </section>
 
     <!-- OUR WORK -->
-    <section>
+    <section id="work">
         <h2>Our Work</h2>
         <p>
             We engage youth and communities through training, tree planting,
@@ -58,7 +76,7 @@
     </section>
 
     <!-- IMPACT -->
-    <section>
+    <section id="impact">
         <h2>Our Impact</h2>
         <p>
             Over 5 hectares restored, 200+ youth empowered, and growing
@@ -67,13 +85,15 @@
     </section>
 
     <!-- SOCIAL MEDIA -->
-    <section>
+    <section id="follow">
         <h2>Follow Us</h2>
 
-        <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a> |
-        <a ref="https://twitter.com/greenhas" target="_blank">Twitter</a> |
-        <a href="https://www.instagram.com/greenh.spaces" target="_blank">Instagram</a> |
-        <a href="https://www.linkedin.com/company/greenharvestspaces" target="_blank">LinkedIn</a>
+        <div class="social-links">
+            <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a>
+            <a href="https://twitter.com/greenhas" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/greenh.spaces" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/company/greenharvestspaces" target="_blank">LinkedIn</a>
+        </div>
 
     </section>
 

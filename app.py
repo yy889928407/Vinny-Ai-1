@@ -1,10 +1,14 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html", backend_status="Running")
+    return render_template(
+        "index.html",
+        backend_status="Running",
+        backend_host=request.host,
+    )
 
 @app.route("/status")
 def status():
