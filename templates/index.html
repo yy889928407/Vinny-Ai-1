@@ -16,6 +16,13 @@
 
 <body>
     <div class="top-bar">
+        <img id="brand-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="GreenHarvest Spaces Africa" class="brand-logo">
+        <script>
+            const brandLogo = document.getElementById('brand-logo');
+            if (brandLogo && brandLogo.getAttribute('src').includes('{{')) {
+                brandLogo.src = '../static/images/logo.png';
+            }
+        </script>
         <nav class="top-nav">
             <a href="#about">About</a>
             <a href="#focus">Focus</a>
@@ -30,6 +37,13 @@
 
     <!-- HEADER -->
     <header>
+        <img id="page-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="GreenHarvest Spaces Africa logo" class="page-logo">
+        <script>
+            const pageLogo = document.getElementById('page-logo');
+            if (pageLogo && pageLogo.getAttribute('src').includes('{{')) {
+                pageLogo.src = '../static/images/logo.png';
+            }
+        </script>
         <div class="hero-graphics" aria-hidden="true">
             <span class="shape shape-1"></span>
             <span class="shape shape-2"></span>
@@ -108,8 +122,9 @@
     <section id="impact">
         <h2>Our Impact</h2>
         <p>
-            Over 5 hectares restored, 200+ youth empowered, and growing
-            climate resilience across communities.
+             200+ youth empowered, and growing
+            climate resilience across communities through knowlegde tranfer.
+            5000 trees plants. 
         </p>
     </section>
 
